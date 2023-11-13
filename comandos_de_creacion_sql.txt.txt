@@ -1,0 +1,30 @@
+CREATE DATABASE integrador_cac;
+
+USE integrador_cac;
+
+CREATE TABLE `integrador_cac`.`oradores` (
+  `id_orador` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(40) NOT NULL,
+  `apellido` VARCHAR(40) NOT NULL,
+  `mail` VARCHAR(40) NOT NULL,
+  `tema` VARCHAR(50) NOT NULL,
+  `fecha_alta` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_orador`));
+  
+DESCRIBE `integrador_cac`.`oradores`;
+  
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`) VALUES ('Pepe', 'Argento', 'pargento@gmail.com', 'El sufrimiento del hincha de Racing');
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`) VALUES ('Juan', 'Perez', 'jperez@gmail.com', 'Como fundar una Pyme y no morir en el intento');
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`) VALUES ('Roberto', 'Sanchez', 'rsanchez@hotmail.com', 'La música en los 70');
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`) VALUES ('Carlos', 'Gimenez', 'cgimenez@yahoo.com', 'Cordoba y el cuarteto');
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`) VALUES ('Rene', 'Favaloro', 'rfavaloro@yahoo.com', 'Los argentinos y la ciencia');
+
+INSERT INTO `integrador_cac`.`oradores` (`nombre`, `apellido`, `mail`, `tema`)
+VALUES
+('Manu', 'Ginobili', 'mginobili@gmail.com', 'Desde Bahia Blanca a la NBA'),
+('Paula', 'Pareto', 'ppareto@gmail.com', 'La alta competencia y la medicina'),
+('Guillermo', 'Puertas', 'gpuertas@outlook.com', 'Desde el DOS hasta Ventanas 11'),
+('Carlos', 'Babbage', 'cbabbage@gmail.com', 'El futuro de la computacion'),
+('Linus', 'Torvald', 'linux@yahoo.com', 'Las bondades del SO de codigo abierto');
+
+SELECT * FROM `integrador_cac`.`oradores`;
